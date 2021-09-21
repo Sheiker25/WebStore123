@@ -12,7 +12,11 @@ namespace WebStore123
 {
     public class Startup
     {
-    
+        public IConfiguration Configuration { get; set; }
+        public Startup(IConfiguration Configuration)
+        {
+            this.Configuration = Configuration;
+        }
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
