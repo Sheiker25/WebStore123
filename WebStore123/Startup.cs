@@ -32,13 +32,13 @@ namespace WebStore123
 
             app.UseRouting();
 
-            var greetings = "Hello from my first ASP.NET";
+            //var greetings = "Hello from my first ASP.NET";
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
                     {
-                        await context.Response.WriteAsync(greetings);
+                        await context.Response.WriteAsync(Configuration["Greetings"]);
                     });
             });
         }
