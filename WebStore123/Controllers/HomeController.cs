@@ -10,7 +10,7 @@ namespace WebStore123.Controllers
     {
         public IActionResult Index()
         {
-            return Content("Hello from 1 controller");
+            return View ();
         }
 
         public IActionResult SecondAction (string id)
