@@ -30,7 +30,7 @@ namespace WebStore123
                 app.UseDeveloperExceptionPage();
             }
 
-
+            app.UseStaticFiles();
             app.UseRouting();
 
             //var greetings = "Hello from my first ASP.NET";
