@@ -19,10 +19,8 @@ namespace WebStore123.Controllers
             _Employees = TestData.Employees;
         }
 
-        public IActionResult Index()
-        {
-            return View(TestData.Employees);
-        }
+        public IActionResult Index() => View(_Employees);
+        
 
         public IActionResult Details (int id)
         {
@@ -31,7 +29,7 @@ namespace WebStore123.Controllers
             if (employee is null)
                 return NotFound();
 
-            return View();
+            return View(employee);
 
         }
     }
