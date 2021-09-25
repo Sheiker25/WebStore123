@@ -23,5 +23,16 @@ namespace WebStore123.Controllers
         {
             return View(TestData.Employees);
         }
+
+        public IActionResult Details (int id)
+        {
+            var employee = _Employees.SingleOrDefault(e => e.Id == id);
+
+            if (employee is null)
+                return NotFound();
+
+            return View();
+
+        }
     }
 }
