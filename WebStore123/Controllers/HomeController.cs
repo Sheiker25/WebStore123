@@ -10,14 +10,13 @@ namespace WebStore123.Controllers
     public class HomeController : Controller
     {
         
+        public IActionResult Index() => View ();
 
-        public IActionResult Index()
-        {
-            return View ();
-        }
 
-    
 
+        public IActionResult About() => View();
+
+        public IActionResult Catalog() => View();
 
     }
 }
