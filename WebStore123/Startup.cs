@@ -31,9 +31,10 @@ namespace WebStore123
             }
 
             app.UseStaticFiles();
-            app.UseRouting();
 
-            //var greetings = "Hello from my first ASP.NET";
+            app.UseRouting();
+            
+            app.UseMiddleware <> ()
 
             app.UseEndpoints(endpoints =>
             {
