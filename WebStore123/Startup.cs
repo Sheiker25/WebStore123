@@ -19,7 +19,7 @@ namespace WebStore123
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews()
+            services.AddControllersWithViews(opt => opt.Conventions.Add())
                 .AddRazorRuntimeCompilation();
         }
 
@@ -36,6 +36,8 @@ namespace WebStore123
             app.UseRouting();
 
             app.UseMiddleware<TestMiddleware>();
+
+            app.UseWelcomePage("/welcome");
 
             app.UseEndpoints(endpoints =>
             {
