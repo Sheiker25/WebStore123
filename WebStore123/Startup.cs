@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WebStore123.Infrastructure.Middleware;
 
 
 namespace WebStore123
@@ -33,8 +34,8 @@ namespace WebStore123
             app.UseStaticFiles();
 
             app.UseRouting();
-            
-            app.UseMiddleware <> ()
+
+            app.UseMiddleware<TestMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
