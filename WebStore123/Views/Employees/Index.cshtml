@@ -27,6 +27,11 @@
                     <a asp-controller="Employees" asp-action="Details" asp-route-id="@employee.Id">
                         <i class="fa fa-info"></i>
                     </a>
+                    <a asp-controller="Employees" asp-action="TestAction"
+                       asp-route-parameter1="@employee.LastName"
+                       asp-route-Param2="@employee.Age">
+                        Test
+                    </a>
                 </td>
             </tr>
             }

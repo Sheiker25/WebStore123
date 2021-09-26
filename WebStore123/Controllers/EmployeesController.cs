@@ -32,5 +32,10 @@ namespace WebStore123.Controllers
             return View(employee);
 
         }
+
+        public IActionResult TestAction ( string Parameter1, int Param2)
+        {
+            return Content($"P1:{Parameter1} - P2:{Param2}");
+        }
     }
 }
